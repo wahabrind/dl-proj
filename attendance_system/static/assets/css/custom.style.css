@@ -1,0 +1,133 @@
+
+/*-------Dashboard page css start----------*/
+
+.kt-aside-menu .kt-menu__nav {
+  padding: 0 0 15px 0 !important;
+}
+.copyright-1 {
+  position: absolute;
+  display: block;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-bottom: 0;
+}
+.custom-grid-box {
+  display: grid;
+}
+.custom-grid-txt{
+  align-self: center;
+}
+
+/*-------Dashboard page css end----------*/
+
+/*----Login Page css Start------*/
+
+.custom-bootstrap-select .form-control{
+  border-radius: 46px !important;
+  padding-left: 0rem !important;
+  padding-right: 0rem !important;
+}
+.custom-bootstrap-select .btn{
+  border-radius: 46px !important;
+  height: 46px !important;
+}
+.custom-bootstrap-select .filter-option-inner-inner {
+  line-height: 2;
+}
+.bootstrap-select .dropdown-toggle .filter-option {
+  padding: 0.1rem 0rem 0.1rem 0rem;
+}
+.bootstrap-select > .dropdown-toggle:after {
+  margin-top: 2px;
+  margin-right: 0px;
+  font-size: 0.8rem;
+}
+/*----Login Page css end------*/
+
+/*----table css Start------*/
+.bg-secondary-light {
+  background-color: #F4F5F9 !important;
+}
+#kt_table_1_info {
+  display: none;
+}
+.kt-z-index--1 {
+  z-index: 1 !important;
+}
+.kt-negative-spacing--3 {
+  margin-top: -30px !important;
+}
+#kt_table_1_length {
+  display: none;
+}
+#kt_table_1_filter {
+  display: none;
+}
+/*----table css end------*/
+
+/*----form css Start------*/
+.form-group {
+  margin-bottom: 1rem !important;
+}
+
+
+/*----form css end------*/
+
+
+.kt-aside--minimize .kt-aside-menu .copyright-1{
+  display: none;
+}
+
+.kt-aside--minimize .copyright-1{
+  display: none;
+}
+.custom-avatar-uploader {
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  border: 2px dashed #ebedf2;
+  border-radius: 4px;
+}
+
+/*------- User Profile ----------*/
+
+.cus-cover-img img{
+  height: 100px;
+  width: 100px !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.edit-profile-form .kt-input-icon > .kt-input-icon__icon {
+  height: 40px;
+}
+
+#example-date-input{
+  text-transform: uppercase;
+}
+#kt_dashboard_daterangepicker{
+  cursor: auto;
+}
+.company_head{
+  cursor: default;
+}
+
+[data-field="delete"] ,[data-field="activity"] ,[data-field="actions"],[data-field="total_members"]  {
+  cursor: default !important;
+}
+
+/*----Member page css start------*/
+
+.alert-hide-on-md{
+  display: none;
+}
+
+@media (max-width: 710px){
+.alert-hide-on-md{
+  display: block;
+}
+.alert-hide-on-xs{
+  display: none;
+}
+}
+/*----Member page css end------*/

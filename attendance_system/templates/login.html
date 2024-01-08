@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	{% load static %}
+
+	<link rel="stylesheet" href="{% static 'home/css/core-style.css'%}">
+	<title>Wahab - Fashion Ecommerce Login</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'home/css/font-awesome.min.css'%} ">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'home/css/icon-font.min.css'%}  ">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href=" {% static 'home/css/material-design-iconic-font.min.css'%}">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href=" {% static 'home/css/signup-animate.css' %} ">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href=" {% static 'home/css/hamburgers.min.css' %}">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'home/css/util.css'%}">
+	<link rel="stylesheet" type="text/css" href="{% static 'home/css/main.css'%}">
+	<!--===============================================================================================-->
+</head>
+
+<body style="background-color: #999999;">
+<div id="toastem"></div>
+
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="login100-more" style="background-image: url({% static 'home/images/bg-img/bg-1.jpg' %});"></div>
+
+			<div class="wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50">
+				<form class="login100-form validate-form" method='post'>
+
+
+					{% csrf_token %}
+					<span class="login100-form-title p-b-59">
+						Login
+					</span>
+						{% for field in form %}
+
+					<div class="wrap-input100 validate-input" data-validate="Name is required">
+						<span class="label-input100">{{field.label_tag}}</span><br>
+						{{field}} 
+						<span class="focus-input100"></span>
+					</div>
+						{% for error in field.errors %}
+							<div id='{{field.label_tag}}' class="mb-3 ">{{error}}</div>
+						{% endfor %}
+					{% endfor %}
+						{% if form.errors %}
+							<div  class="mb-3 ">Username and Password do not match</div>
+						{% endif %}
+				
+				
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<input type="submit" class="login100-form-btn" value="Login">
+						</div>
+						<div class="row">
+						<div class="col-6">
+						<a href="/password-reset/" class="dis-block txt3 hov1 p-r-30 p-t-10 p-b-10 p-l-30 mt-3">
+							Forgot Password
+							<i class="fa fa-long-arrow-right m-l-5"></i>
+						</a>
+						
+						</div>
+					
+					
+						<div class="col-6">
+						<a href="/signup" class="dis-block txt3 hov1 p-r-30 p-t-10 p-b-10 p-l-30 mt-3">
+							Don't have an account ?
+							<i class="fa fa-long-arrow-right m-l-5"></i>
+						</a>
+						
+						</div>
+						
+						</div>
+
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+
+		<!-- loading scripts and notification file -->
+	
+    <!-- jQuery (Necessary for All JavaScript Plugins) -->
+    <script src=" {% static 'home/js/jquery.js' %}"></script>
+	<script src=" {% static 'home/js/toastem.js' %}"></script>
+	<link rel="stylesheet" href="{% static 'home/css/toastem.css'%}">
+
+	<button hidden class="btn scs" type="button" name="button" id="success-alert1">Success Alert</button>
+
+
+
+	{% if messages %}
+	{% for message in messages %}
+
+	<script>
+		toastem.successs('{{message}}');
+		document.getElementById('success-alert1').click();
+	</script>
+	{% endfor %}
+
+	{% endif %}
+
+
+
+</body>
+
+</html>

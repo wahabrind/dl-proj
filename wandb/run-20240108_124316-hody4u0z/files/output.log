@@ -1,0 +1,45 @@
+Usage: wandb sync [OPTIONS] [PATH]...
+Try 'wandb sync --help' for help.
+Error: Invalid value for '[PATH]...': Path "'D:\\\\work\\\\vit_training\\\\vit-base-patch16-224-in21k-finetuned-eurosat'" does not exist.
+Usage: wandb sync [OPTIONS] [PATH]...
+Try 'wandb sync --help' for help.
+Error: Invalid value for '[PATH]...': Path "'D:/work/vit_training/vit-base-patch16-224-in21k-finetuned-eurosat'" does not exist.
+Usage: wandb sync [OPTIONS] [PATH]...
+Try 'wandb sync --help' for help.
+Error: Invalid value for '[PATH]...': Path "'D:/work/vit_training/vit-base-patch16-224-in21k-finetuned-eurosat/'" does not exist.
+Find logs at: d:\work\vit_training\wandb\debug-cli.Pc.log
+Skipping directory: D:\work\vit_training\vit-base-patch16-224-in21k-finetuned-eurosat
+Find logs at: d:\work\vit_training\wandb\debug-cli.Pc.log
+Skipping directory: D:\work\vit_training\vit-base-patch16-224-in21k-finetuned-eurosat
+Usage: wandb sync [OPTIONS] [PATH]...
+Try 'wandb sync --help' for help.
+Error: Invalid value for '[PATH]...': Path 'D:/work/vit_training/vit-base-patch16-224-in21k-finetuned-eurosat/checkpoint-12886-finetuned-euroset' does not exist.
+Usage: wandb sync [OPTIONS] [PATH]...
+Try 'wandb sync --help' for help.
+Error: Invalid value for '[PATH]...': Path 'D:/work/vit_training/vit-base-patch16-224-in21k-finetuned-eurosat/checkpoint-12886-finetuned-euroset/' does not exist.
+Find logs at: d:\work\vit_training\wandb\debug-cli.Pc.log
+Skipping directory: D:\work\vit_training\vit-base-patch16-224-in21k-finetuned-eurosat\checkpoint-12886-finetuned-eurosat
+Find logs at: d:\work\vit_training\wandb\debug-cli.Pc.log
+Exception in thread Thread-5:
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\cuda\lib\threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "D:\Anaconda3\envs\cuda\lib\site-packages\wandb\sync\sync.py", line 271, in run
+    ds.open_for_scan(sync_item)
+  File "D:\Anaconda3\envs\cuda\lib\site-packages\wandb\sdk\internal\datastore.py", line 104, in open_for_scan
+    self._read_header()
+  File "D:\Anaconda3\envs\cuda\lib\site-packages\wandb\sdk\internal\datastore.py", line 201, in _read_header
+    raise Exception("Invalid header")
+Exception: Invalid header
+Exception in thread Thread-5:
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\cuda\lib\threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "D:\Anaconda3\envs\cuda\lib\site-packages\wandb\sync\sync.py", line 271, in run
+    ds.open_for_scan(sync_item)
+  File "D:\Anaconda3\envs\cuda\lib\site-packages\wandb\sdk\internal\datastore.py", line 104, in open_for_scan
+    self._read_header()
+  File "D:\Anaconda3\envs\cuda\lib\site-packages\wandb\sdk\internal\datastore.py", line 201, in _read_header
+    raise Exception("Invalid header")
+Exception: Invalid header
+Find logs at: d:\work\vit_training\wandb\debug-cli.Pc.log

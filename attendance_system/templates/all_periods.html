@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+
+<div class="row">
+{% for period in periods %}
+								<div class="col-xl-3 col-lg-4 col-md-6">
+									<div class="kt-portlet kt-portlet--height-fluid">
+										<div class="kt-portlet__head kt-portlet__head--noborder">
+											<div class="kt-portlet__head-label">
+												<h3 class="kt-portlet__head-title">
+												</h3>
+											</div>
+											{% comment %} <div class="kt-portlet__head-toolbar">
+												<a href="#" class="btn btn-clean btn-icon" data-toggle="dropdown">
+													<i class="flaticon-more-1"></i>
+												</a>
+											
+											</div> {% endcomment %}
+										</div>
+										<div class="kt-portlet__body kt-portlet__body--fit-y">
+
+											<!--begin::Widget -->
+											<div class="kt-widget kt-widget--user-profile-4">
+												<div class="kt-widget__head">
+													<div class="kt-widget__media">
+														{% comment %} <img class="kt-widget__img kt-hidden-" src="assets/media/users/300_21.jpg" alt="image"> {% endcomment %}
+														<span class="kt-badge kt-badge--username kt-badge--unified-primary kt-badge--lg kt-badge--rounded kt-badge--bold">{{period.period_name.0|capfirst}}</span>
+                                                        <div class="kt-widget__pic kt-widget__pic--danger kt-font-danger kt-font-boldest kt-hidden">
+															JB
+														</div>
+													</div>
+													<div class="kt-widget__content">
+														<div class="kt-widget__section">
+															<a href="#" class="kt-widget__username">
+																Period : {{period.period_name}}
+															</a>
+															<a href="#" class="kt-widget__username">
+																Teacher : {{period.teacher_name}}
+															</a>
+															<a href="#" class="kt-widget__username">
+																Date : {{period.time_start}}
+															</a>
+															<div class="kt-widget__button">
+															<a href="/all_attendances/{{period.id}}">	<span class="btn btn-label-success btn-sm">View Attendances</span> </a>
+															</div>
+															<div class="kt-widget__action">
+																<a href="#" class="btn btn-icon btn-circle btn-label-facebook">
+																	<i class="socicon-facebook"></i>
+																</a>
+																<a href="#" class="btn btn-icon btn-circle btn-label-twitter">
+																	<i class="socicon-twitter"></i>
+																</a>
+																<a href="#" class="btn btn-icon btn-circle btn-label-linkedin">
+																	<i class="socicon-linkedin"></i>
+																</a>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<!--end::Widget -->
+										</div>
+									</div>
+								</div>
+
+    {% endfor %}
+							</div>
+
+{% endblock body %}
+
+
+{% block external_js %}{% endblock external_js %}
+
